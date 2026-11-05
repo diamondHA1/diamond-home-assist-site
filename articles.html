@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — Diamond Home Assist</title>
+<meta name="description" content="Guides for Michigan families on Home Help, paid caregiving, and in-home care.">
+<link rel="icon" href="assets/mark.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .post { display: flex; flex-direction: column; height: 100%; }
+  .post-thumb { aspect-ratio: 16/10; border-radius: 8px; overflow: hidden; margin-bottom: 14px; }
+  .post-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .post a.more { margin-top: auto; font-weight: 600; font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><img src="assets/mark.png" alt=""><span>Diamond Home Assist</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="services.html" class="nav-drop-toggle">Services<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <div class="nav-drop-menu">
+          <a href="services.html">All services</a>
+          <a href="services.html#personal-care">Personal care</a>
+          <a href="services.html#meals">Meals &amp; nutrition</a>
+          <a href="services.html#housekeeping">Housekeeping</a>
+          <a href="services.html#errands">Errands &amp; rides</a>
+          <a href="services.html#medication">Medication reminders</a>
+          <a href="services.html#companionship">Companionship</a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <div class="nav-dropdown">
+        <a href="articles.html" class="nav-drop-toggle active">Resources<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <div class="nav-drop-menu">
+          <a href="articles.html">All resources</a>
+          <a href="articles/family-caregiver-pay.html">Family caregiver pay</a>
+          <a href="articles/home-help-guide.html">Home Help guide</a>
+          <a href="articles/what-home-care-covers.html">What care covers</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="tel:+13138897575" class="nav-phone">(313) 889-7575</a>
+    <a href="contact.html" class="btn btn-primary nav-cta">Get Started</a>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap narrow">
+    <p class="eyebrow">Resources</p>
+    <h1>Plain answers for Michigan families</h1>
+    <p class="lead">No state jargon. The questions families ask us most.</p>
+  </div>
+</section>
+
+<section style="padding-top:40px;">
+  <div class="wrap">
+    <div class="card-grid cols-3">
+      <article class="card post">
+        <div class="post-thumb"><img src="assets/family-caregiver.png" alt=""></div>
+        <span class="pill-tag">Pay</span>
+        <h3>Can a family member get paid to be a caregiver?</h3>
+        <p>Who qualifies through Home Help, who's excluded, and how it works.</p>
+        <a class="more" href="articles/family-caregiver-pay.html">Read guide →</a>
+      </article>
+      <article class="card post">
+        <div class="post-thumb"><img src="assets/team-south-asian.png" alt=""></div>
+        <span class="pill-tag">Program</span>
+        <h3>Understanding Michigan's Home Help Program</h3>
+        <p>What it covers, who's eligible, and how to apply.</p>
+        <a class="more" href="articles/home-help-guide.html">Read guide →</a>
+      </article>
+      <article class="card post">
+        <div class="post-thumb"><img src="assets/elder-care.jpg" alt=""></div>
+        <span class="pill-tag">Care</span>
+        <h3>What does non-medical home care cover?</h3>
+        <p>From bathing to companionship — what's included.</p>
+        <a class="more" href="articles/what-home-care-covers.html">Read guide →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="wrap narrow cta-band">
+    <h2>Still have questions?</h2>
+    <p>We're happy to walk through it — free and no pressure.</p>
+    <a href="contact.html" class="btn btn-light">Talk to our team</a>
+    <a href="index.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.35); color:#fff;">Ask the assistant</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand"><img src="assets/mark.png" alt=""><p>Non-medical in-home care for Michigan families.</p><p class="footer-tag">Because your loved one is a gem.</p></div>
+    <div><h4>Company</h4><a href="about.html">About</a><a href="services.html">Services</a><a href="articles.html">Resources</a><a href="contact.html">Contact</a></div>
+    <div><h4>Learn</h4><a href="articles/family-caregiver-pay.html">Family caregiver pay</a><a href="articles/home-help-guide.html">Home Help guide</a></div>
+    <div><h4>Contact</h4><a href="tel:+13138897575">(313) 889-7575</a><a href="mailto:info@diamondhomeassist.com">info@diamondhomeassist.com</a></div>
+  </div>
+  <div class="wrap footer-bottom"><span>© 2026 Diamond Home Assist</span><span>Non-medical home care</span></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
