@@ -456,6 +456,7 @@ section { padding: 72px 0; }
 }
 .site-footer a { display: block; color: #a8adc4; font-size: .9rem; margin-bottom: .45rem; }
 .site-footer a:hover { color: #fff; }
+.site-footer span { display: block; color: #a8adc4; font-size: .9rem; margin-bottom: .45rem; }
 .footer-brand img { height: 40px; filter: brightness(0) invert(1); margin-bottom: 12px; }
 .footer-brand p { font-size: .88rem; max-width: 28ch; margin: 0; }
 .footer-tag { font-family: var(--font-display); font-style: italic; color: var(--lavender, #b3a6db); margin-top: 8px; }
