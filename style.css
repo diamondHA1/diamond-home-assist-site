@@ -164,7 +164,7 @@ footer li{list-style:none;margin:6px 0}
 @media(min-width:900px){.burger{display:none}}
 .btn-lg{padding:18px 32px;font-size:1.15rem}
 .btn-light{background:#fff;color:var(--navy)}
-.hero h1{max-width:14ch}
+.hero h1{max-width:20ch}
 .hero-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin:-4px 0 22px}
 .hero-links a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.4)}
 .hero-links a:hover{color:var(--gold)}
