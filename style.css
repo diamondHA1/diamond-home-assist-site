@@ -332,3 +332,5 @@ h1 em,h2 em{font-style:italic;color:var(--accent);font-weight:400}
 .nav-emblem img{width:26px;height:auto}
 @media(max-width:959px){.nav-right .nav-cta{padding:6px 14px 6px 6px}.nav-emblem{width:30px;height:30px}.nav-emblem img{width:21px}}
 @media(max-width:420px){.nav-right .nav-cta .nav-emblem{display:flex}}
+/* hero photo: no offset frame, aligned to the grid */
+@media(min-width:960px){.hero-img{margin:0}.hero-img::after{content:none}.hero-badge{left:-24px}}
