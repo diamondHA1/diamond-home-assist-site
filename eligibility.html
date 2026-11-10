@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check If You Qualify for Michigan Home Help | Diamond Home Assist</title>
+<meta name="description" content="Answer 6 quick questions and find out on the spot if your loved one may qualify for Michigan Medicaid Home Help — and if you can get paid as their caregiver.">
+<link rel="icon" href="assets/mark-sm.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://diamondhomeassist.com/eligibility.html">
+<meta property="og:title" content="Do you qualify? Get paid to care for your loved one">
+<meta property="og:description" content="6 quick questions. Instant answer. Michigan Medicaid Home Help — Detroit & Wayne County.">
+<meta property="og:image" content="https://diamondhomeassist.com/assets/og-image.jpg">
+<style>
+.quiz-wrap{min-height:calc(100vh - 68px);background:linear-gradient(180deg,var(--teal-soft),var(--bg));padding:40px 0 80px}
+.quiz{max-width:640px;margin:0 auto;background:#fff;border-radius:24px;box-shadow:0 20px 50px rgba(15,42,67,.12);border:1px solid var(--line);padding:28px}
+@media(min-width:700px){.quiz{padding:40px}}
+.q-top{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;color:var(--muted);margin-bottom:10px}
+.q-back{background:none;border:0;color:var(--teal);font-weight:700;cursor:pointer;font-family:inherit;font-size:.92rem;padding:0}
+.q-back[hidden]{visibility:hidden;display:inline}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:28px}
+.bar i{display:block;height:100%;width:0;background:var(--teal);border-radius:99px;transition:width .3s}
+.step h2{font-size:clamp(1.4rem,4vw,1.8rem);margin-bottom:6px}
+.step .hint{color:var(--muted);margin-bottom:20px}
+.choices{display:grid;gap:10px}
+.choice{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:16px 18px;border:1.5px solid #cfd6de;border-radius:14px;background:#fff;font:inherit;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+.choice:hover{border-color:var(--teal)}
+.choice.on{border-color:var(--teal);background:var(--teal-soft)}
+.choice small{display:block;font-weight:400;color:var(--muted);font-size:.88rem}
+.multi .choice::before{content:"";flex:none;width:22px;height:22px;border:2px solid #cfd6de;border-radius:6px}
+.multi .choice.on::before{content:"✓";border-color:var(--teal);background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.8rem}
+.grid-2{display:grid;gap:10px}
+@media(min-width:560px){.grid-2{grid-template-columns:1fr 1fr}}
+.next{width:100%;margin-top:18px}
+.next:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.result-ico{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:16px}
+.r-yes .result-ico{background:#e3f5ea}
+.r-maybe .result-ico{background:#fdf3dc}
+.r-no .result-ico{background:#f1f3f6}
+.result p{color:var(--muted);margin-bottom:12px}
+.result ul{margin:0 0 18px 20px;color:var(--ink)}
+.result li{margin:6px 0}
+.lead-form{border-top:1px solid var(--line);margin-top:22px;padding-top:22px}
+.lead-form h3{margin-bottom:12px}
+.fine{font-size:.82rem;color:var(--muted);margin-top:14px;text-align:center}
+.alt-contact{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.alt-contact .btn{flex:1}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><img src="assets/mark-sm.png" alt="">Diamond Home Assist</a>
+    <nav class="links" id="menu"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About us</a><a href="articles.html">Resources</a><a href="careers.html">Careers</a><a href="#contact" data-msg>Contact</a></nav>
+    <div class="nav-right">
+      <a class="btn btn-ghost btn-sm" href="tel:+13138897575">📞 (313) 889-7575</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main class="quiz-wrap">
+  <div class="wrap">
+    <div class="quiz" id="quiz">
+      <div class="q-top"><button class="q-back" id="back" hidden>← Back</button><span id="count"></span></div>
+      <div class="bar"><i id="bar"></i></div>
+      <div id="stage"></div>
+    </div>
+  </div>
+</main>
+
+<div class="msg-modal" id="msgModal" hidden>
+  <div class="msg-box" role="dialog" aria-modal="true" aria-labelledby="msgTitle">
+    <button class="msg-close" aria-label="Close">×</button>
+    <h3 id="msgTitle">How would you like to reach us?</h3>
+    <p>We usually reply within one business day.</p>
+    <a class="msg-opt" href="tel:+13138897575"><span>📞</span><div><strong>Call us</strong><small>(313) 889-7575</small></div></a>
+    <a class="msg-opt" href="sms:+13138897575"><span>💬</span><div><strong>Send a text</strong><small>(313) 889-7575</small></div></a>
+    <a class="msg-opt" href="mailto:info@diamondhomeassist.com?subject=Question%20about%20Home%20Help"><span>✉️</span><div><strong>Email us</strong><small>info@diamondhomeassist.com</small></div></a>
+  </div>
+</div>
+
+<script>
+(function(){
+  // ---- header menu + contact popup ----
+  var m=document.getElementById('msgModal'),b=document.querySelector('.burger'),menu=document.getElementById('menu');
+  function openM(e){e&&e.preventDefault();m.hidden=false;menu.classList.remove('open')}
+  document.querySelectorAll('[data-msg]').forEach(function(a){a.addEventListener('click',openM)});
+  m.addEventListener('click',function(e){if(e.target===m||e.target.classList.contains('msg-close'))m.hidden=true});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')m.hidden=true});
+  b.addEventListener('click',function(){var o=menu.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+
+  // ---- quiz ----
+  var Q=[
+    {k:'county',t:'Where does your loved one live?',h:'The person who needs care.',o:[
+      ['wayne','Detroit or Wayne County'],['mi','Somewhere else in Michigan'],['out','Outside Michigan']]},
+    {k:'medicaid',t:'Do they have Michigan Medicaid?',h:'Medicaid is the health coverage card from the State of Michigan (sometimes called Healthy Michigan or MI Health Link).',o:[
+      ['yes','Yes'],['pending','They applied — waiting for an answer'],['no','No'],['unsure',"I'm not sure"]]},
+    {k:'help',multi:true,t:'What do they need hands-on help with?',h:'Pick everything that applies.',o:[
+      ['Bathing','Bathing','adl'],['Dressing','Dressing','adl'],['Eating','Eating','adl'],['Using the toilet','Using the toilet','adl'],
+      ['Getting in/out of bed or chair','Getting in or out of bed / a chair','adl'],['Walking / moving around','Walking or moving around the home','adl'],
+      ['Grooming','Grooming (hair, shaving, nails)','adl'],['Taking medications','Taking medications'],['Cooking meals','Cooking meals'],
+      ['Housework / laundry','Housework or laundry'],['Shopping','Shopping'],['None of these','None of these — they mostly need reminders or company']]},
+    {k:'home',t:'Where are they living right now?',o:[
+      ['home','Their own home, or a family member’s home'],['facility','Nursing home or hospital'],['afc','Assisted living or adult foster care home']]},
+    {k:'current',t:'Do they already get Michigan Home Help?',o:[['no','No'],['yes','Yes']]},
+    {k:'caregiver',t:'Who would take care of them?',h:'Home Help can pay an adult family member or friend as the caregiver.',o:[
+      ['me','Me — I’m their adult child, relative, or friend'],['spouse','Me — I’m their husband or wife'],['parent','Me — I’m the parent of a child under 18'],['need','We need a caregiver provided'],['self','I’m the person who needs care']]}
+  ];
+  var A={},i=0,stage=document.getElementById('stage'),bar=document.getElementById('bar'),cnt=document.getElementById('count'),back=document.getElementById('back');
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+  function render(){
+    var q=Q[i];back.hidden=i===0;cnt.textContent='Question '+(i+1)+' of '+Q.length;bar.style.width=(i/Q.length*100)+'%';
+    var h='<div class="step"><h2>'+q.t+'</h2>'+(q.h?'<p class="hint">'+q.h+'</p>':'')+'<div class="choices '+(q.multi?'multi grid-2':'')+'">';
+    q.o.forEach(function(o){var on=q.multi?(A[q.k]||[]).indexOf(o[0])>-1:A[q.k]===o[0];h+='<button class="choice'+(on?' on':'')+'" data-v="'+esc(o[0])+'">'+o[1]+'</button>'});
+    h+='</div>'+(q.multi?'<button class="btn btn-primary next" id="next"'+((A[q.k]||[]).length?'':' disabled')+'>Next →</button>':'')+'</div>';
+    stage.innerHTML=h;
+    stage.querySelectorAll('.choice').forEach(function(btn){btn.onclick=function(){
+      var v=btn.getAttribute('data-v');
+      if(q.multi){var arr=A[q.k]||[];
+        if(v==='None of these'){arr=arr.indexOf(v)>-1?[]:[v]}else{arr=arr.filter(function(x){return x!=='None of these'});var p=arr.indexOf(v);p>-1?arr.splice(p,1):arr.push(v)}
+        A[q.k]=arr;render();}
+      else{A[q.k]=v;go();}
+    }});
+    var nx=document.getElementById('next');if(nx)nx.onclick=go;
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  function go(){
+    // stop early on clear deal-breakers
+    if(A.county==='out'||(i===4&&A.current==='yes')){return result()}
+    if(i<Q.length-1){i++;render()}else result();
+  }
+  back.onclick=function(){if(stage.querySelector('.result')){render();return}if(i>0){i--;render()}};
+
+  function result(){
+    bar.style.width='100%';cnt.textContent='Your result';back.hidden=false;
+    var adlLabels=Q[2].o.filter(function(o){return o[2]==='adl'}).map(function(o){return o[0]});
+    var hasADL=(A.help||[]).some(function(x){return adlLabels.indexOf(x)>-1});
+    var r,form=true,status;
+
+    if(A.county==='out'){
+      status='Outside Michigan';form=false;
+      r=['r-no','📍','This program is for Michigan residents','Home Help is a Michigan Medicaid program, so we can’t help with care outside Michigan. Your state may have a similar family caregiver program — check with your state’s Medicaid office.'];
+    }else if(A.current==='yes'){
+      status='Already on Home Help';form=false;
+      r=['r-no','ℹ️','They already have Home Help','Since your loved one already receives Home Help, any questions about their case or caregiver should go to their MDHHS Adult Services Worker.'];
+    }else if(A.home==='facility'||A.home==='afc'){
+      status='Lives in a facility';
+      r=['r-no','🏥','Home Help is for people living at home','Home Help pays for care in a private home, not in a nursing home, hospital, assisted living, or adult foster care home. If they’re planning to move back home, we can help you get ready.'];
+    }else if(!hasADL){
+      status='No hands-on daily care need';
+      r=['r-no','🤔','They may not qualify right now','Home Help pays for hands-on help with daily tasks like bathing, dressing, eating, using the toilet, or moving around. It doesn’t cover reminders, supervision, or companionship alone. If their needs change, we’re here.'];
+    }else{
+      var issues=[];
+      if(A.medicaid!=='yes')issues.push(A.medicaid==='pending'?'Their Medicaid needs to be approved first — we can start getting things ready now.':'They need Michigan Medicaid. If you’re not sure, we can help you check.');
+      if(A.caregiver==='spouse')issues.push('Under Home Help rules, a husband or wife can’t be the paid caregiver — but we can provide a trained Diamond caregiver.');
+      if(A.caregiver==='parent')issues.push('Parents of children under 18 can’t be the paid caregiver — but we can provide a trained Diamond caregiver.');
+      var outsideWayne=A.county==='mi';
+      if(!issues.length&&!outsideWayne){
+        status='LIKELY ELIGIBLE';
+        r=['r-yes','✅','Good news — they likely qualify!',(A.caregiver==='me'?'You may be able to get paid to care for them. ':'')+'Leave your info and a Diamond team member will call you within one business day to walk you through next steps. We handle the paperwork — free.'];
+      }else{
+        status=outsideWayne?'Possible – outside Wayne County':'POSSIBLY ELIGIBLE';
+        if(outsideWayne)issues.push('We serve Detroit and Wayne County right now. Leave your info — we’re expanding and will reach out if we can help.');
+        r=['r-maybe','👍','They may qualify','A few things to know:<ul>'+issues.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>Leave your info and we’ll call you to talk it through.'];
+      }
+    }
+
+    var summary=Q.map(function(q){var v=A[q.k];if(v==null)return null;var lab=q.multi?v.join(', '):(q.o.filter(function(o){return o[0]===v})[0]||[,v])[1];return [q.t,lab]}).filter(Boolean);
+    var h='<div class="result '+r[0]+'"><div class="result-ico">'+r[1]+'</div><h2>'+r[2]+'</h2><p>'+r[3]+'</p>';
+    if(form){
+      h+='<form class="lead-form" action="https://formsubmit.co/info@diamondhomeassist.com" method="POST">'+
+        '<h3>Where can we reach you?</h3>'+
+        '<input type="hidden" name="_subject" value="ELIGIBILITY CHECK – '+esc(status)+'">'+
+        '<input type="hidden" name="_next" value="https://diamondhomeassist.com/thanks.html">'+
+        '<input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">'+
+        '<input type="hidden" name="Lead type" value="Family / client – eligibility checker">'+
+        '<input type="hidden" name="Result" value="'+esc(status)+'">'+
+        summary.map(function(s){return '<input type="hidden" name="'+esc(s[0])+'" value="'+esc(s[1])+'">'}).join('')+
+        '<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">'+
+        '<div class="row2"><div class="field"><label for="fn">Your name</label><input id="fn" name="Name" required autocomplete="name"></div>'+
+        '<div class="field"><label for="fp">Phone</label><input id="fp" name="Phone" type="tel" required autocomplete="tel"></div></div>'+
+        '<div class="row2"><div class="field"><label for="fe">Email (optional)</label><input id="fe" name="email" type="email" autocomplete="email"></div>'+
+        '<div class="field"><label for="fz">Their ZIP code</label><input id="fz" name="ZIP" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required></div></div>'+
+        '<button class="btn btn-primary" style="width:100%" type="submit">Get my free call back →</button>'+
+        '<p class="fine">We’ll only use your info to contact you about Home Help. Final eligibility is decided by MDHHS.</p></form>';
+    }else{
+      h+='<div class="alt-contact"><a class="btn btn-ghost" href="index.html">Back to home</a><a class="btn btn-primary" href="tel:+13138897575">📞 Call us</a></div>';
+    }
+    h+='<p class="fine" style="margin-top:18px"><a href="#" id="restart">Start over</a></p></div>';
+    stage.innerHTML=h;
+    document.getElementById('restart').onclick=function(e){e.preventDefault();A={};i=0;render()};
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  render();
+})();
+</script>
+</body>
+</html>
