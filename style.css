@@ -150,3 +150,32 @@ footer li{list-style:none;margin:6px 0}
 .hiring .eyebrow{color:var(--gold)}
 .hiring p{color:#e3f2f1;max-width:560px}
 .hiring-inner{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+
+/* --- nav + contact refresh --- */
+.nav-right{display:flex;align-items:center;gap:10px}
+.links a.active{color:var(--teal);font-weight:700}
+.burger{display:flex;flex-direction:column;gap:5px;background:none;border:0;padding:8px;cursor:pointer}
+.burger span{width:24px;height:2.5px;background:var(--navy);border-radius:2px}
+@media(max-width:899px){
+  .links.open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(15,42,67,.08);padding:8px 20px 16px}
+  .links.open a{padding:14px 0;border-bottom:1px solid var(--line);font-size:1.05rem}
+  .nav-right .btn{display:none}
+}
+@media(min-width:900px){.burger{display:none}}
+.btn-lg{padding:18px 32px;font-size:1.15rem}
+.btn-light{background:#fff;color:var(--navy)}
+.hero h1{max-width:14ch}
+.hero-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin:-4px 0 22px}
+.hero-links a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.4)}
+.hero-links a:hover{color:var(--gold)}
+.msg-modal{position:fixed;inset:0;z-index:100;background:rgba(15,42,67,.55);display:flex;align-items:center;justify-content:center;padding:20px}
+.msg-modal[hidden]{display:none}
+.msg-box{background:#fff;border-radius:20px;padding:28px;max-width:420px;width:100%;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.3)}
+.msg-box h3{font-size:1.4rem;padding-right:30px}
+.msg-box>p{color:var(--muted);margin-bottom:16px}
+.msg-close{position:absolute;top:14px;right:16px;background:none;border:0;font-size:1.8rem;line-height:1;color:var(--muted);cursor:pointer}
+.msg-opt{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1.5px solid var(--line);border-radius:14px;margin-bottom:10px;text-decoration:none;color:var(--ink);transition:border-color .15s,background .15s}
+.msg-opt:hover{border-color:var(--teal);background:var(--teal-soft)}
+.msg-opt span{font-size:1.4rem}
+.msg-opt strong{display:block;color:var(--navy)}
+.msg-opt small{color:var(--muted);font-size:.9rem}

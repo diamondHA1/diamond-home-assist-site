@@ -16,13 +16,10 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="index.html"><img src="assets/mark-sm.png" alt="">Diamond Home Assist</a>
-    <nav class="links">
-      <a href="index.html#how">For families</a>
-      <a href="careers.html">Caregiver jobs</a>
-    </nav>
-    <div style="display:flex;gap:10px">
-      <a class="btn btn-ghost btn-sm call" href="tel:+13138897575">(313) 889-7575</a>
+    <nav class="links" id="menu"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About us</a><a href="articles.html">Resources</a><a href="careers.html" class="active">Careers</a><a href="#contact" data-msg>Contact</a></nav>
+    <div class="nav-right">
       <a class="btn btn-primary btn-sm" href="#apply">Apply now</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
@@ -123,8 +120,32 @@
 </footer>
 
 <div class="callbar">
-  <a class="btn btn-ghost" href="tel:+13138897575">📞 Call</a>
-  <a class="btn btn-primary" href="#apply">Apply now</a>
+  <a class="btn btn-primary" href="tel:+13138897575">📞 Call now</a>
+  <a class="btn btn-ghost" href="#contact" data-msg>💬 Message us</a>
 </div>
+
+<div class="msg-modal" id="msgModal" hidden>
+  <div class="msg-box" role="dialog" aria-modal="true" aria-labelledby="msgTitle">
+    <button class="msg-close" aria-label="Close">×</button>
+    <h3 id="msgTitle">How would you like to reach us?</h3>
+    <p>We usually reply within one business day.</p>
+    <a class="msg-opt" href="tel:+13138897575"><span>📞</span><div><strong>Call us</strong><small>(313) 889-7575</small></div></a>
+    <a class="msg-opt" href="sms:+13138897575"><span>💬</span><div><strong>Send a text</strong><small>(313) 889-7575</small></div></a>
+    <a class="msg-opt" href="mailto:info@diamondhomeassist.com?subject=Question%20about%20Home%20Help"><span>✉️</span><div><strong>Email us</strong><small>info@diamondhomeassist.com</small></div></a>
+    <a class="msg-opt" href="index.html#apply"><span>📝</span><div><strong>Fill out a short form</strong><small>We'll call you back</small></div></a>
+  </div>
+</div>
+<script>
+(function(){
+  var m=document.getElementById('msgModal'),b=document.querySelector('.burger'),menu=document.getElementById('menu');
+  function open(e){e&&e.preventDefault();m.hidden=false;menu.classList.remove('open');b.setAttribute('aria-expanded','false')}
+  function close(){m.hidden=true}
+  document.querySelectorAll('[data-msg]').forEach(function(a){a.addEventListener('click',open)});
+  m.addEventListener('click',function(e){if(e.target===m||e.target.classList.contains('msg-close'))close()});
+  m.querySelectorAll('.msg-opt').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  b.addEventListener('click',function(){var o=menu.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+})();
+</script>
 </body>
 </html>

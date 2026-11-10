@@ -20,15 +20,10 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="index.html"><img src="assets/mark-sm.png" alt="">Diamond Home Assist</a>
-    <nav class="links">
-      <a href="#how">How it works</a>
-      <a href="#qualify">Who qualifies</a>
-      <a href="#faq">FAQ</a>
-      <a href="careers.html">Caregiver jobs</a>
-    </nav>
-    <div style="display:flex;gap:10px">
-      <a class="btn btn-ghost btn-sm call" href="tel:+13138897575">(313) 889-7575</a>
+    <nav class="links" id="menu"><a href="index.html" class="active">Home</a><a href="services.html">Services</a><a href="about.html">About us</a><a href="articles.html">Resources</a><a href="careers.html">Careers</a><a href="#contact" data-msg>Contact</a></nav>
+    <div class="nav-right">
       <a class="btn btn-primary btn-sm" href="#apply">Check eligibility</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
@@ -37,13 +32,13 @@
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">Michigan Medicaid Home Help · Detroit &amp; Wayne County</span>
-      <h1>Caring for a loved one? You may be able to get paid for it.</h1>
-      <p class="lead" style="margin-top:18px">If your parent or relative has Medicaid and needs help with bathing, dressing, or meals, Michigan's Home Help program can pay a family member to be their caregiver. We handle the paperwork — free.</p>
+      <h1>Get paid to care for your family member at home.</h1>
+      <p class="lead" style="margin-top:18px">Does your mom, dad, or relative have Medicaid and need help with bathing, dressing, or meals? Michigan can pay you to be their caregiver. We do all the paperwork for free.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#apply">See if you qualify →</a>
-        <a class="btn btn-ghost" href="careers.html">I want to work as a caregiver</a>
+        <a class="btn btn-primary btn-lg" href="tel:+13138897575">📞 Call now</a>
+        <a class="btn btn-light btn-lg" href="#contact" data-msg>💬 Message us</a>
       </div>
-      <p class="talk-first">Rather talk it through? <a href="tel:+13138897575">Call (313) 889-7575</a></p>
+      <p class="hero-links"><a href="#apply">Check if you qualify (2-min form) →</a><a href="careers.html">Looking for caregiver work? →</a></p>
       <div class="trust">
         <span>MDHHS-approved Home Help agency</span>
         <span>No cost to families</span>
@@ -122,26 +117,6 @@
     </div>
   </div>
 </section>
-
-<section class="good-hands alt">
-  <div class="wrap grid2">
-    <div class="rounded"><img src="assets/elder-companion.jpg" alt="Caregiver sitting with an older woman at home"></div>
-    <div>
-      <span class="eyebrow">Trusted &amp; approved</span>
-      <h2>Your loved one deserves care you can trust</h2>
-      <ul class="check">
-        <li><strong>MDHHS-approved</strong> Michigan Medicaid Home Help agency</li>
-        <li>Every caregiver is <strong>background-checked and trained</strong></li>
-        <li>A <strong>real person answers</strong> when you call — (313) 889-7575</li>
-        <li>Clear, simple steps — <strong>we tell you what happens next</strong></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="areas">
-  <div class="wrap"><strong>Serving Detroit &amp; Wayne County:</strong> Detroit · Dearborn · Dearborn Heights · Inkster · Westland · Taylor · Livonia · Redford · Romulus · Southgate · Wyandotte · Hamtramck &amp; more</div>
-</div>
 
 <section id="faq" class="alt">
   <div class="wrap">
@@ -230,7 +205,9 @@
       <div>
         <a class="brand" href="index.html" style="color:#fff"><img src="assets/mark-sm.png" alt="">Diamond Home Assist</a>
         <p style="margin-top:12px;max-width:340px">MDHHS-approved Michigan Medicaid Home Help agency serving Detroit and Wayne County. Because your loved one is a gem.</p>
+        <p style="margin-top:10px;font-size:.88rem">Serving Detroit, Dearborn, Inkster, Westland, Taylor, Livonia, Redford, Romulus, Southgate, Wyandotte, Hamtramck &amp; all of Wayne County.</p>
       </div>
+      <div><h4>Company</h4><ul><li><a href="about.html">About us</a></li><li><a href="services.html">Services</a></li><li><a href="articles.html">Resources</a></li><li><a href="careers.html">Careers</a></li></ul></div>
       <div><h4>Families</h4><ul><li><a href="#how">How it works</a></li><li><a href="#qualify">Who qualifies</a></li><li><a href="#apply">Check eligibility</a></li><li><a href="articles/home-help-guide.html">Home Help guide</a></li><li><a href="articles/family-caregiver-pay.html">Family caregiver pay</a></li></ul></div>
       <div><h4>Contact</h4><ul><li><a href="tel:+13138897575">(313) 889-7575</a></li><li><a href="mailto:info@diamondhomeassist.com">info@diamondhomeassist.com</a></li><li>607 Shelby St, Suite 1045<br>Detroit, MI 48226</li><li><a href="careers.html">Caregiver jobs →</a></li></ul></div>
     </div>
@@ -239,8 +216,32 @@
 </footer>
 
 <div class="callbar">
-  <a class="btn btn-ghost" href="tel:+13138897575">📞 Call</a>
-  <a class="btn btn-primary" href="#apply">Check eligibility</a>
+  <a class="btn btn-primary" href="tel:+13138897575">📞 Call now</a>
+  <a class="btn btn-ghost" href="#contact" data-msg>💬 Message us</a>
 </div>
+
+<div class="msg-modal" id="msgModal" hidden>
+  <div class="msg-box" role="dialog" aria-modal="true" aria-labelledby="msgTitle">
+    <button class="msg-close" aria-label="Close">×</button>
+    <h3 id="msgTitle">How would you like to reach us?</h3>
+    <p>We usually reply within one business day.</p>
+    <a class="msg-opt" href="tel:+13138897575"><span>📞</span><div><strong>Call us</strong><small>(313) 889-7575</small></div></a>
+    <a class="msg-opt" href="sms:+13138897575"><span>💬</span><div><strong>Send a text</strong><small>(313) 889-7575</small></div></a>
+    <a class="msg-opt" href="mailto:info@diamondhomeassist.com?subject=Question%20about%20Home%20Help"><span>✉️</span><div><strong>Email us</strong><small>info@diamondhomeassist.com</small></div></a>
+    <a class="msg-opt" href="index.html#apply"><span>📝</span><div><strong>Fill out a short form</strong><small>We'll call you back</small></div></a>
+  </div>
+</div>
+<script>
+(function(){
+  var m=document.getElementById('msgModal'),b=document.querySelector('.burger'),menu=document.getElementById('menu');
+  function open(e){e&&e.preventDefault();m.hidden=false;menu.classList.remove('open');b.setAttribute('aria-expanded','false')}
+  function close(){m.hidden=true}
+  document.querySelectorAll('[data-msg]').forEach(function(a){a.addEventListener('click',open)});
+  m.addEventListener('click',function(e){if(e.target===m||e.target.classList.contains('msg-close'))close()});
+  m.querySelectorAll('.msg-opt').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  b.addEventListener('click',function(){var o=menu.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+})();
+</script>
 </body>
 </html>
