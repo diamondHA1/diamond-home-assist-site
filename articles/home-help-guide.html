@@ -1,65 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Understanding Michigan's Home Help Program — Diamond Home Assist</title>
 <meta name="description" content="A family's guide to Michigan's Home Help Program: what it covers, who's eligible, and how to apply for in-home personal care.">
-<link rel="icon" href="../assets/mark.png">
-<link rel="stylesheet" href="../styles.css">
-<style>
-  .article { max-width: 760px; margin: 0 auto; }
-  .article h2 { font-size: 1.7rem; margin-top: 2.2rem; }
-  .article p, .article li { font-size: 1.08rem; color: #3a3c50; }
-  .article ul { padding-left: 1.2rem; } .article li { margin-bottom:.5rem; }
-  .article .meta { color: var(--muted); font-size:.9rem; margin-bottom: 1.4rem; }
-  .callout { background: var(--lavender-soft); border-left: 4px solid var(--purple); border-radius: 12px; padding: 18px 22px; margin: 1.8rem 0; }
-  .callout p { margin:0; color: var(--navy); }
-  .disclaimer { font-size:.86rem; color: var(--muted); border-top:1px solid var(--line); margin-top: 2.4rem; padding-top: 1.4rem; }
-  .back { display:inline-flex; gap:6px; color:var(--indigo); font-weight:600; margin-bottom:1.4rem; }
-  .steps { counter-reset: s; list-style:none; padding-left:0; }
-  .steps li { position:relative; padding-left:48px; margin-bottom:1rem; }
-  .steps li::before { counter-increment:s; content:counter(s); position:absolute; left:0; top:0; width:32px; height:32px; border-radius:50%; background:var(--navy); color:#fff; display:grid; place-items:center; font-weight:700; font-size:.95rem; }
-</style>
+<link rel="icon" href="../assets/mark-sm.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="canonical" href="https://diamondhomeassist.com/articles/home-help-guide.html">
 </head>
 <body>
 
-<header class="site-header">
+<header>
   <div class="wrap nav">
-    <a href="../index.html" class="brand"><img src="../assets/mark.png" alt="Diamond Home Assist emblem"><span>Diamond&nbsp;Home&nbsp;Assist</span></a>
-    <nav class="nav-links" id="navLinks">
-      <a href="../index.html">Home</a>
-      <div class="nav-dropdown">
-        <a href="../services.html" class="nav-drop-toggle">Services<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <div class="nav-drop-menu">
-          <a href="../services.html">All services</a>
-          <a href="../services.html#personal-care">Personal care</a>
-          <a href="../services.html#meals">Meals &amp; nutrition</a>
-          <a href="../services.html#housekeeping">Housekeeping</a>
-          <a href="../services.html#errands">Errands &amp; rides</a>
-          <a href="../services.html#medication">Medication reminders</a>
-          <a href="../services.html#companionship">Companionship</a>
-        </div>
-      </div>
-      <a href="../about.html">About</a>
-      <div class="nav-dropdown">
-        <a href="../articles.html" class="nav-drop-toggle active">Resources<svg class="nav-drop-chevron" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
-        <div class="nav-drop-menu">
-          <a href="../articles.html">All resources</a>
-          <a href="family-caregiver-pay.html">Family caregiver pay</a>
-          <a href="home-help-guide.html">Home Help guide</a>
-          <a href="what-home-care-covers.html">What care covers</a>
-        </div>
-      </div>
-      <a href="../contact.html">Contact</a>
-    </nav>
-    <a href="tel:+13138897575" class="nav-phone">(313) 889-7575</a>
-    <a href="../contact.html" class="btn btn-primary nav-cta">Get Started</a>
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a class="brand" href="../index.html"><img src="../assets/mark-sm.png" alt="">Diamond Home Assist</a>
+    <nav class="links" id="menu"><a href="../index.html">Home</a><a href="../services.html">Services</a><a href="../about.html">About us</a><a href="../articles.html" class="active">Resources</a><a href="../careers.html">Careers</a><a href="#contact" data-msg>Contact</a></nav>
+    <div class="nav-right">
+      <a class="btn btn-primary btn-sm" href="../eligibility.html">Check eligibility</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
-<section style="padding:56px 0 0;">
+<main class="article-page"><section style="padding:56px 0 0;">
   <div class="wrap article">
     <a href="../articles.html" class="back">← All resources</a>
     <span class="pill-tag">How it works</span>
@@ -102,23 +68,67 @@
     <p>Families can hire an individual caregiver directly, or work with an agency. An agency handles enrollment, background checks, training on program standards, scheduling, electronic visit verification, and billing — which removes much of the administrative burden from the family.</p>
 
     <div class="callout">
-      <p><strong>Not sure where to start?</strong> We'll help you understand eligibility and the assessment process — free of charge. <a href="../contact.html">Talk to our team →</a></p>
+      <p><strong>Not sure where to start?</strong> We'll help you understand eligibility and the assessment process — free of charge. <a href="../eligibility.html">Talk to our team →</a></p>
     </div>
 
     <p class="disclaimer">This article is general information, not legal, financial, or medical advice. Program rules and eligibility can change and individual situations vary. For official guidance, contact MDHHS or visit michigan.gov/homehelp.</p>
   </div>
+</section></main>
+
+<section class="cta-band">
+  <div class="wrap center">
+    <h2>See if your family qualifies</h2>
+    <p class="lead">6 quick questions. Instant answer. Free.</p>
+    <div class="hero-ctas" style="justify-content:center">
+      <a class="btn btn-primary btn-lg" href="../eligibility.html">Check if you qualify →</a>
+      <a class="btn btn-ghost btn-lg" href="#contact" data-msg>💬 Message us</a>
+    </div>
+  </div>
 </section>
 
-<footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-brand"><img src="../assets/mark.png" alt="Diamond Home Assist"><p>Compassionate, non-medical in-home care for Michigan families.</p><p class="footer-tag">Because your loved one is a gem.</p></div>
-    <div><h4>Explore</h4><a href="../services.html">Services</a><a href="../about.html">About us</a><a href="../articles.html">Resources</a><a href="../contact.html">Contact</a></div>
-    <div><h4>Services</h4><a href="../services.html">Personal care</a><a href="../services.html">Companionship</a><a href="../services.html">Housekeeping</a><a href="../services.html">Errands</a></div>
-    <div><h4>Get in touch</h4><a href="tel:+13138897575">(313) 889-7575</a><a href="mailto:info@diamondhomeassist.com">info@diamondhomeassist.com</a><span>607 Shelby St, Suite 1045, Detroit, MI 48226</span><a href="#">Serving Detroit &amp; Wayne County</a></div>
+<section class="hiring">
+  <div class="wrap hiring-inner">
+    <div><span class="eyebrow">Caregiver careers</span><h2>Become a Diamond caregiver</h2><p>We're hiring caregivers across Detroit and Wayne County. Flexible hours, work close to home, and real support from our team.</p></div>
+    <a class="btn btn-primary" href="../careers.html">Apply to be a caregiver →</a>
   </div>
-  <div class="wrap footer-bottom"><span>© 2026 Diamond Home Assist. All rights reserved.</span><span>Non-medical home care · Michigan</span></div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="fgrid fgrid4">
+      <div><a class="brand" href="../index.html" style="color:#fff"><img src="../assets/mark-sm.png" alt="">Diamond Home Assist</a>
+        <p style="margin-top:12px;max-width:340px">MDHHS-approved Michigan Medicaid Home Help agency serving Detroit and Wayne County. Because your loved one is a gem.</p></div>
+      <div><h4>Company</h4><ul><li><a href="../about.html">About us</a></li><li><a href="../services.html">Services</a></li><li><a href="../articles.html">Resources</a></li><li><a href="../careers.html">Careers</a></li></ul></div>
+      <div><h4>Families</h4><ul><li><a href="../index.html#how">How it works</a></li><li><a href="../eligibility.html">Check eligibility</a></li><li><a href="../articles/home-help-guide.html">Home Help guide</a></li><li><a href="../articles/family-caregiver-pay.html">Family caregiver pay</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+13138897575">(313) 889-7575</a></li><li><a href="mailto:info@diamondhomeassist.com">info@diamondhomeassist.com</a></li><li>607 Shelby St, Suite 1045<br>Detroit, MI 48226</li></ul></div>
+    </div>
+    <div class="legal">© 2026 Diamond Home Assist LLC · Non-medical in-home care · General information only, not medical or legal advice.</div>
+  </div>
 </footer>
-
-<script src="../script.js"></script>
+<div class="callbar">
+  <a class="btn btn-primary" href="tel:+13138897575">📞 Call now</a>
+  <a class="btn btn-ghost" href="#contact" data-msg>💬 Message us</a>
+</div>
+<div class="msg-modal" id="msgModal" hidden>
+  <div class="msg-box" role="dialog" aria-modal="true" aria-labelledby="msgTitle">
+    <button class="msg-close" aria-label="Close">×</button>
+    <h3 id="msgTitle">How would you like to reach us?</h3>
+    <p>We usually reply within one business day.</p>
+    <a class="msg-opt" href="tel:+13138897575"><span>📞</span><div><strong>Call us</strong><small>(313) 889-7575</small></div></a>
+    <a class="msg-opt" href="sms:+13138897575"><span>💬</span><div><strong>Send a text</strong><small>(313) 889-7575</small></div></a>
+    <a class="msg-opt" href="mailto:info@diamondhomeassist.com?subject=Question%20about%20Home%20Help"><span>✉️</span><div><strong>Email us</strong><small>info@diamondhomeassist.com</small></div></a>
+    <a class="msg-opt" href="../eligibility.html"><span>✅</span><div><strong>Check if you qualify</strong><small>6 quick questions, instant answer</small></div></a>
+  </div>
+</div>
+<script>
+(function(){
+  var m=document.getElementById('msgModal'),b=document.querySelector('.burger'),menu=document.getElementById('menu');
+  function open(e){e&&e.preventDefault();m.hidden=false;menu.classList.remove('open');b.setAttribute('aria-expanded','false')}
+  document.querySelectorAll('[data-msg]').forEach(function(a){a.addEventListener('click',open)});
+  m.addEventListener('click',function(e){if(e.target===m||e.target.classList.contains('msg-close'))m.hidden=true});
+  m.querySelectorAll('.msg-opt').forEach(function(a){a.addEventListener('click',function(){m.hidden=true})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')m.hidden=true});
+  b.addEventListener('click',function(){var o=menu.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+})();
+</script>
 </body>
 </html>
