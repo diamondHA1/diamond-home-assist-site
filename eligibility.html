@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Check If You Qualify for Michigan Home Help | Diamond Home Assist</title>
-<meta name="description" content="Answer 6 quick questions and find out on the spot if your loved one may qualify for Michigan Medicaid Home Help — and if you can get paid as their caregiver.">
+<title>Check If You Qualify for In-Home Care | Diamond Home Assist – Michigan Home Help</title>
+<meta name="description" content="Answer 6 quick questions and find out on the spot if you or your loved one may qualify for in-home care through Michigan Medicaid Home Help, with a trained Diamond caregiver or a family caregiver we hire.">
 <link rel="icon" href="assets/mark-sm.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="canonical" href="https://diamondhomeassist.com/eligibility.html">
-<meta property="og:title" content="Do you qualify? Get paid to care for your loved one">
+<meta property="og:title" content="Do you qualify for in-home care? | Diamond Home Assist">
 <meta property="og:description" content="6 quick questions. Instant answer. Michigan Medicaid Home Help — Detroit & Wayne County.">
 <meta property="og:image" content="https://diamondhomeassist.com/assets/og-image.jpg">
 <style>
@@ -56,15 +56,16 @@
 
 <div class="topbar"><div class="wrap">
   <span class="tb-left">MDHHS-approved Michigan Medicaid Home Help agency · Detroit &amp; Wayne County</span>
-  <span>Call or text <a href="tel:+13138897575">(313) 889-7575</a></span>
+  <span><a class="tb-hire" href="careers.html">Now hiring caregivers</a>Call or text <a href="tel:+13138897575">(313) 889-7575</a></span>
 </div></div>
 
 <header>
   <div class="wrap nav">
     <a class="brand" href="index.html" aria-label="Diamond Home Assist — home"><img class="wordmark" src="assets/wordmark.png" alt="Diamond Home Assist"></a>
-    <nav class="links" id="menu"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About us</a><a href="articles.html">Resources</a><a href="careers.html">Careers</a><a href="#contact" data-msg>Contact</a></nav>
+    <nav class="links" id="menu"><a href="index.html">Home</a><a href="services.html">Services</a><a href="careers.html">Careers</a><a href="about.html">About us</a><a href="articles.html">Resources</a><a href="#contact" data-msg>Contact</a></nav>
     <div class="nav-right">
-      <a class="btn btn-primary nav-cta" href="eligibility.html"><span class="nav-emblem" aria-hidden="true"><img src="assets/mark-sm.png" alt=""></span>Check eligibility</a>
+      <a class="nav-jobs" href="careers.html">Caregiver jobs</a>
+      <a class="btn btn-primary nav-cta" href="eligibility.html"><span class="nav-emblem" aria-hidden="true"><img src="assets/mark-sm.png" alt=""></span>Get care</a>
       <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -77,6 +78,7 @@
       <div class="bar"><i id="bar"></i></div>
       <div id="stage"></div>
     </div>
+    <p class="fine" style="margin-top:22px">Looking for caregiver work instead? <a class="text-link" href="careers.html">See caregiver jobs</a></p>
   </div>
 </main>
 
@@ -88,6 +90,7 @@
     <a class="msg-opt" href="tel:+13138897575"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><strong>Call us</strong><small>(313) 889-7575</small></div></a>
     <a class="msg-opt" href="sms:+13138897575"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg></span><div><strong>Send a text</strong><small>(313) 889-7575</small></div></a>
     <a class="msg-opt" href="mailto:info@diamondhomeassist.com?subject=Question%20about%20Home%20Help"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14"/><path d="m3 6 9 7 9-7"/></svg></span><div><strong>Email us</strong><small>info@diamondhomeassist.com</small></div></a>
+    <a class="msg-opt" href="careers.html#apply"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"/></svg></span><div><strong>Apply to be a caregiver</strong><small>Two-minute application</small></div></a>
   </div>
 </div>
 <script>
@@ -102,7 +105,7 @@
 
   // ---- quiz ----
   var Q=[
-    {k:'county',t:'Where does your loved one live?',h:'The person who needs care.',o:[
+    {k:'county',t:'Where does the person who needs care live?',h:'If that’s you, answer these questions about yourself.',o:[
       ['wayne','Detroit or Wayne County'],['mi','Somewhere else in Michigan'],['out','Outside Michigan']]},
     {k:'medicaid',t:'Do they have Michigan Medicaid?',h:'Medicaid is the health coverage card from the State of Michigan (sometimes called Healthy Michigan or MI Health Link).',o:[
       ['yes','Yes'],['pending','They applied — waiting for an answer'],['no','No'],['unsure',"I'm not sure"]]},
@@ -114,8 +117,8 @@
     {k:'home',t:'Where are they living right now?',o:[
       ['home','Their own home, or a family member’s home'],['facility','Nursing home or hospital'],['afc','Assisted living or adult foster care home']]},
     {k:'current',t:'Do they already get Michigan Home Help?',o:[['no','No'],['yes','Yes']]},
-    {k:'caregiver',t:'Who would take care of them?',h:'Home Help can pay an adult family member or friend as the caregiver.',o:[
-      ['me','Me — I’m their adult child, relative, or friend'],['spouse','Me — I’m their husband or wife'],['parent','Me — I’m the parent of a child under 18'],['need','We need a caregiver provided'],['self','I’m the person who needs care']]}
+    {k:'caregiver',t:'Who would you like to provide the care?',h:'We can provide a trained Diamond caregiver, or hire an adult family member or friend.',o:[
+      ['need','A trained Diamond caregiver'],['me','Me — I’m their adult child, relative, or friend'],['other','Another relative or friend'],['spouse','Me — I’m their husband or wife'],['parent','Me — I’m the parent of a child under 18'],['unsure','Not sure yet — we’d like to talk it through']]}
   ];
   var A={},i=0,stage=document.getElementById('stage'),bar=document.getElementById('bar'),cnt=document.getElementById('count'),back=document.getElementById('back');
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
@@ -169,7 +172,8 @@
       var outsideWayne=A.county==='mi';
       if(!issues.length&&!outsideWayne){
         status='LIKELY ELIGIBLE';
-        r=['r-yes','<span class="star big"></span>','Good news — they likely qualify!',(A.caregiver==='me'?'You may be able to get paid to care for them. ':'')+'Leave your info and a Diamond team member will call you within one business day to walk you through next steps. We handle the paperwork — free.'];
+        var who=A.caregiver==='me'?'You may be able to get paid to care for them. ':A.caregiver==='need'?'We’ll match them with a trained Diamond caregiver close to home. ':A.caregiver==='other'?'The relative or friend you have in mind may be able to get paid to care for them. ':'';
+        r=['r-yes','<span class="star big"></span>','Good news — they likely qualify!',who+'Leave your info and a Diamond team member will call you within one business day to walk you through next steps. We handle the paperwork — free.'];
       }else{
         status=outsideWayne?'Possible – outside Wayne County':'POSSIBLY ELIGIBLE';
         if(outsideWayne)issues.push('We serve Detroit and Wayne County right now. Leave your info — we’re expanding and will reach out if we can help.');
